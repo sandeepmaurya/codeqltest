@@ -59,7 +59,7 @@ jobs:
     - name: Set secret
       env:
         BASE64_GITHUB_TOKEN: ${{ secrets.BASE64_GITHUB_TOKEN }}
-      run: sed -i.back "s|\$\{BASE64_GITHUB_TOKEN\}|${BASE64_GITHUB_TOKEN}|g" ./.npmrc
+      run: sed -i.back "s/\${BASE64_GITHUB_TOKEN}/${BASE64_GITHUB_TOKEN}/g" ./.npmrc
 
     - name: Install node
       uses: actions/setup-node@v4
