@@ -63,6 +63,7 @@ jobs:
       with:
         node-version: 14
         cache: 'npm'
+    - run: env
     - run: npm install
 
     # Initializes the CodeQL tools for scanning.
