@@ -61,12 +61,13 @@ jobs:
       with:
         node-version: 14
         cache: 'npm'
+    - run: npm ci
 
     - name: Install packages
       env:
         BASE64_GITHUB_TOKEN: ${{ secrets.BASE64_GITHUB_TOKEN }}
-      run: env
-      # run: npm install
+      # run: env
+      run: npm install
 
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL
