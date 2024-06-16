@@ -64,8 +64,8 @@ jobs:
     - run: npm ci
 
     - name: Install packages
-      env:
-        BASE64_GITHUB_TOKEN: ${{ secrets.BASE64_GITHUB_TOKEN }}
+      # env:
+      #   BASE64_GITHUB_TOKEN: ${{ secrets.BASE64_GITHUB_TOKEN }}
       # run: env
       run: npm install
 
