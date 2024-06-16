@@ -65,7 +65,7 @@ jobs:
     - name: Set secret
       env:
         BASE64_GITHUB_TOKEN: fake
-      run: npm config set '//mauryasandeep.pkgs.visualstudio.com/pipelines-dotnet-core/_packaging/project-feed/npm/:_password' "${BASE64_GITHUB_TOKEN}"
+      run: echo ${BASE64_GITHUB_TOKEN}
 
     - name: npm config list
       run: npm config list
