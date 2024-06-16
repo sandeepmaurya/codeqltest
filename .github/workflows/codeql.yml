@@ -58,7 +58,7 @@ jobs:
 
     - name: Install packages
       env:
-        BASE64_GITHUB_TOKEN: ${{secrets.BASE64_GITHUB_TOKEN}}
+        BASE64_GITHUB_TOKEN: ${{ secrets.BASE64_GITHUB_TOKEN }}
       uses: actions/setup-node@v4
       with:
         node-version: 14
