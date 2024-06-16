@@ -56,13 +56,15 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Install packages
-      env:
-        BASE64_GITHUB_TOKEN: ${{ secrets.BASE64_GITHUB_TOKEN }}
+    - name: Install node
       uses: actions/setup-node@v4
       with:
         node-version: 14
         cache: 'npm'
+
+    - name: Install packages
+      env:
+        BASE64_GITHUB_TOKEN: ${{ secrets.BASE64_GITHUB_TOKEN }}
       run: env
       # run: npm install
 
